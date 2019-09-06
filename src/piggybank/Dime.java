@@ -1,23 +1,18 @@
 package piggybank;
 
 public class Dime extends AbstractDeposit {
-  // just return a string with "1 Dime" or "2 Dimes"
-
   int amount;
   double value;
-  double depositTotal;
 
   public Dime(int amount) {
-    super(amount);
-    this.value = 0.1;
-    this.depositTotal = depositTotal;
+    this.amount = amount;
+    this.value = 0.10;
   }
 
   // if no amount arg, make amount 1
   public Dime() {
     this.amount = 1;
-    this.value = 0.1;
-    this.depositTotal = depositTotal;
+    this.value = 0.10;
   }
 
   @Override
@@ -26,13 +21,8 @@ public class Dime extends AbstractDeposit {
   }
 
   @Override
-  public void deposit(int amount) {
-    depositTotal = amount * value;
-  }
-
-  @Override
   public double getDepositTotal() {
-    return depositTotal;
+    return amount * value;
   }
 
   @Override
