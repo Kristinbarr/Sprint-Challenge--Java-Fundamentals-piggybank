@@ -1,14 +1,12 @@
 package piggybank;
 
 public abstract class AbstractDeposit {
-// create the deposit totals
 
   int amount;
   double depositTotal;
 
   public AbstractDeposit(int amount) {
     this.amount = amount;
-    // this.depositTotal = depositTotal;
   }
 
   public AbstractDeposit() {
@@ -26,13 +24,7 @@ public abstract class AbstractDeposit {
   }
 
   public abstract void deposit(int amount);
-  // public void deposit(int amount) {
-  //   depositTotal = amount * getValue();
-  // }
 
   public abstract double getDepositTotal();
-  // public double getDepositTotal() {
-  //   return depositTotal;
-  // }
 
 }
