@@ -8,7 +8,7 @@ public abstract class AbstractDeposit {
 
   public AbstractDeposit(int amount) {
     this.amount = amount;
-    this.depositTotal = depositTotal;
+    // this.depositTotal = depositTotal;
   }
 
   public AbstractDeposit() {
@@ -25,11 +25,14 @@ public abstract class AbstractDeposit {
     this.amount = amount;
   }
 
-  public double getDepositTotal() {
-    return depositTotal;
-  }
+  public abstract void deposit(int amount);
+  // public void deposit(int amount) {
+  //   depositTotal = amount * getValue();
+  // }
 
-  public void deposit(int amount) {
-    depositTotal = amount * getValue();
-  }
+  public abstract double getDepositTotal();
+  // public double getDepositTotal() {
+  //   return depositTotal;
+  // }
+
 }
